@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: techsales
+    database: techsales_mx
+    schema: public
+    tables:
+      - name: sales_orders
+      - name: reps
+      - name: products
+      - name: customers
+      - name: suppliers

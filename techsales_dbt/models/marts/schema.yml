@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: fct_sales
+    description: "Final sales fact table — orders joined with rep and product details"
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order"
+        tests:
+          - unique
+          - not_null
+
+      - name: status
+        description: "Order status — COMPLETED, PENDING, or CANCELLED"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['COMPLETED', 'PENDING', 'CANCELLED']
+
+      - name: revenue
+        description: "Total order revenue in MXN"
+        tests:
+          - not_null
+
+      - name: rep_name
+        description: "Sales rep name — joined from stg_reps"
+        tests:
+          - not_null
+
+  - name: mart_rep_performance
+    description: "Pre-calculated rep performance KPIs for dashboards"
+    columns:
+      - name: rep_name
+        description: "Sales rep name"
+        tests:
+          - unique
+          - not_null
+
+      - name: quota_attainment_pct
+        description: "Completed revenue as % of annual quota"
+        tests:
+          - not_null
