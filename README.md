@@ -1,5 +1,9 @@
 # TechSales MX — End-to-End Data Analytics Project
 
+## Dashboard Preview
+![TechSales MX Dashboard](techsalesMX_dashboard_screenshot.png)
+
+
 A complete data analytics and engineering project built on a fictional 
 Mexican tech company dataset. Demonstrates the full analyst/engineer stack.
 
