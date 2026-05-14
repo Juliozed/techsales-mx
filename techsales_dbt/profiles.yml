@@ -5,7 +5,7 @@ techsales_dbt:
       type: postgres
       host: localhost
       user: postgres
-      password: gg
+      password: Moocow420
       port: 5432
       dbname: techsales_mx
       schema: analytics
